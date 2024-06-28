@@ -1,0 +1,358 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+* {
+    padding: 0;
+    margin: 0;
+}
+:root {
+    --main-color:#0ea622;
+}
+.container {
+    max-width: 1100px;
+    margin:0 auto;
+    padding: 0 20px;
+}
+html {
+    scroll-behavior: smooth;
+}
+body {
+    font-family: "Roboto", sans-serif;
+    scroll-behavior: smooth;
+}
+.main-head h1 {
+    padding: 40px 0;
+    text-align: center;
+    text-transform: capitalize;
+    font-size: 70px;
+    font-weight: 900;
+    color: var(--main-color);
+}
+a {
+    text-decoration: none;
+}
+ul {
+    list-style: none;
+}
+header {
+    background-color: rgba(16, 41, 42, 0.71);
+    box-shadow: 0 0 10px;
+}
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-flow: wrap;
+}
+@media (max-width:991px) {
+    header .container{
+        justify-content: center
+    }
+}
+header .container h2 > a {
+    font-size: 40px;
+    font-family: "Playwrite ES Deco", cursive;
+    letter-spacing: -2px;
+    padding: 5px 0;
+    color: aliceblue;
+    text-transform: capitalize;
+}
+header .container i {
+    transform: rotate(-30deg);
+}
+header .container i,header .container span {
+    color: var(--main-color);
+}
+header .container ul {
+    display: flex;
+    justify-content: center;
+}
+header .container ul li a {
+    color: #ffff;
+    font-size: 25px;
+    padding: 10px 15px;
+    transition: .3s;
+    text-transform: capitalize;
+}
+@media (max-width:767px) {
+    header .container ul li a {
+        padding: 10px;
+        font-size: 20px;
+        display: block;
+    }
+}
+header .container ul li a:hover {
+    color: #0ea622;
+}
+/* start landing  */
+.landing {
+    background-image: url(../image/landing.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 90vh;
+    position: relative;
+}
+.landing::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: #000000d5;
+}
+.landing .container  {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    flex-flow: wrap;
+    align-items: center;
+    color: aliceblue;
+}
+.landing .container  {
+    position: absolute;
+    top: 50%;
+    text-align: center;
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.landing .container .text {
+    width: fit-content;
+}
+.landing .container h3 {
+    font-size: 40px;
+}
+.landing .container .text h3 span {
+    color: #0ea622;
+
+}
+.landing .container .text p {
+    letter-spacing: 1.5px;
+    margin-top: 20px;
+    color:#ffffffbc;
+    line-height: 1.5;
+}
+.landing .container .icons i {
+    padding: 10px;
+    font-size: 40px;
+    margin-top: 20px;
+    color: aliceblue;
+    transition: .5s;
+}
+.landing .container .icons i:hover {
+    color: #0ea622;
+    box-shadow: 0 0 1px;
+    border-radius: 50%;
+}
+.landing .container .btn a {
+    display: block;
+    background-color: #0ea622;
+    margin-top: 30px;
+    padding: 10px 20px;
+    color: #ffff;
+    border-radius: 5px;
+    text-transform: capitalize;
+    font-weight: 700;
+    position: relative;
+    overflow: hidden;
+    transition: .4s;
+    z-index: 1;
+}
+.landing .container .btn a:hover {
+    color: #0ea622;
+    z-index: 1;
+}
+.landing .container .btn a::before ,
+.landing .container .btn a::after {
+    content: "";
+    position: absolute;
+    width: 51%;
+    top: 0;
+    height: 100%;
+    background-color: #ffff;
+    transition: .4s;
+}
+.landing .container .btn a::before {
+    left: -51%;
+}
+.landing .container .btn a::after {
+    right: -51%;
+}
+.landing .container .btn a:hover::before{
+    left: 0;
+    z-index: -1;
+}
+.landing .container .btn a:hover::after {
+    right: 0;
+    z-index: -1;;
+}
+/* start landing  */
+/* start services  */
+.services {
+    background-color: #cbf1d0;
+    background-size: cover;
+    padding: 50px 0;
+    background-repeat: no-repeat;
+}
+.services .container {
+    display: grid;
+    gap: 20px;
+    padding-bottom: 20px;
+    grid-template-columns: repeat( auto-fill , minmax(200px , 1fr));
+}
+.services .container .box {
+    text-align: center;
+    border-radius: 10px;
+    margin: 10px 0;
+    box-shadow: 0 0 5px;
+    transition: .3s;
+    padding: 20px 10px ;
+}
+.services .container .box:hover {
+    transform: translateY(-10px);
+    cursor: pointer;
+}
+.services .container .box h3 {
+    color: #0b3f12;
+    font-size: 25px;
+    text-transform: capitalize;
+}
+.services .container i {
+    color: #000000;
+    font-size: 100px;
+    margin-bottom: 15px;
+}
+/* end services  */
+.projects .container {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+}
+.projects .container .box {
+    text-align: center;
+    overflow: hidden;
+    box-shadow: 0 0 5px #7baf82;
+    border-radius: 10px;
+    cursor: pointer;
+    margin: 10px 0;
+}
+.projects .container .box:hover img {
+    transform: rotate(3deg) scale(1.1);
+}
+.projects .container .box h3 {
+    font-size: 30px;
+    padding: 10px 0;
+}
+.projects .container .box p {
+    color: #0b3f12;
+}
+.projects .container .box a {
+    display: block;
+    background-color: #000000;
+    margin-top: 30px;
+    padding: 10px 20px;
+    color: #ffff;
+    border-radius: 5px;
+    text-transform: capitalize;
+    font-weight: 700;
+    transition: .4s;
+    width: fit-content;
+    margin:20px auto;
+}
+.projects .container .box a:hover {
+    background-color: #0ea622;
+}
+.projects .container .box .image {
+    overflow: hidden;
+}
+.projects .container .box img {
+    max-width: 100%;
+    transition: .3s;
+}
+/* start contact  */
+.contact {
+    background-image: url(../image/contact.png);
+    background-size: cover;
+    position: relative;
+    margin: 100px 0 0 0 ;
+}
+.contact::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background-color: #000000c7;
+}
+.contact .container ,
+.contact .main-head {
+    position: relative;
+}
+.contact .container  {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow:  wrap;
+    padding: 50px;
+}
+.contact .container div {
+    background-color: #0ea622;
+    text-align: center;
+    margin: 10px;
+    width: 250px;
+    cursor: pointer;
+    border-radius: 20px;
+    padding: px 10px;
+    transition: .3s;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+.contact .container div:hover i,
+.contact .container div:hover a {
+    color: #000000;
+}
+.contact .container div::before {
+    content: "";
+    position: absolute;
+    background-color: #ffff;
+    width: 100%;
+    height: 100%;
+    left: -100%;
+    transition: .4s;
+    z-index: -1;
+}
+.contact .container div:hover::before {
+    left: 0;
+}
+.contact .container div i {
+    padding: 5px;
+    font-size: 40px;
+    color: #ffff;
+    transition: .5s;
+}
+.contact .container div a {
+    color: #ffff;
+    font-size: 30px;
+    transition: 4.s;
+    text-transform: capitalize;
+
+}
+/* end contact  */
+/* footer  */
+.footer {
+    position: relative;
+}
+.footer h2 {
+    color: #ffff;
+    text-align: center;
+    border-top: 1px solid #7baf82;
+    padding: 20px 0;
+}
+.footer a {
+    color: #0ea622;
+    text-transform: capitalize;
+}
